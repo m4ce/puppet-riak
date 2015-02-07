@@ -18,10 +18,10 @@ class riak::config {
       value => $::riak::listener_protobuf_internal;
 
     "ssl.cacertfile":
-      value => "${::riak::ssl_dir}/${::riak::ssl_cacert_file}"
+      value => "${::riak::ssl_dir}/${::riak::ssl_cacert_file}";
 
     "ssl.certfile":
-      value => "${::riak::ssl_dir}/${::riak::ssl_cert_file}"
+      value => "${::riak::ssl_dir}/${::riak::ssl_cert_file}";
 
     "ssl.keyfile":
       value => "${::riak::ssl_dir}/${::riak::ssl_key_file}"
