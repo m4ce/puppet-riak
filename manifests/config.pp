@@ -1,6 +1,7 @@
 class riak::config {
   Ini_setting {
     path => "/etc/riak/riak.conf",
+    section => "",
     require => Package["riak"],
     notify => Service["riak"]
   }
