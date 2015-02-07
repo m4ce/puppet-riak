@@ -6,7 +6,7 @@ class riak::config {
     "listener.https.internal":
       value => $::riak::listener_https_internal;
 
-    "riak.listener.protobuf.internal":
+    "listener.protobuf.internal":
       value => $::riak::listener_protobuf_internal
   }
 }
