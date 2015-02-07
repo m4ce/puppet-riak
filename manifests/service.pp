@@ -1,7 +1,6 @@
 class riak::service {
   service {"riak":
     enable => $::riak::enable,
-    ensure => $::riak::ensure,
-    require => Package["riak"]
+    ensure => $::riak::ensure
   }
 }

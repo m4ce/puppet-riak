@@ -5,6 +5,7 @@ class riak::config {
     group => "riak",
     mode => "0644",
     content => template("riak/riak.conf.erb"),
+    require => Package["riak"],
     notify => Service["riak"]
   }
 }
