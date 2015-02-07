@@ -7,6 +7,7 @@ class riak::install {
   }
 
   package {"riak":
+    allow_virtual => false,
     ensure => "present",
     require => Yumrepo["basho"]
   }
