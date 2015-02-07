@@ -7,6 +7,15 @@ class riak::config {
       value => $::riak::listener_https_internal;
 
     "listener.protobuf.internal":
-      value => $::riak::listener_protobuf_internal
+      value => $::riak::listener_protobuf_internal;
+
+    "ssl.cacertfile":
+      value => $::riak::ssl_cacert_file;
+
+    "ssl.certfile":
+      value => $::riak::ssl_cert_file;
+
+    "ssl.keyfile":
+      value => $::riak::ssl_key_file
   }
 }
