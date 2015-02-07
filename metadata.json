@@ -1,0 +1,19 @@
+{
+  "name": "puppet-riak",
+  "version": "0.0.1",
+  "author": "Matteo Cerutti",
+  "summary": "A simple module to manage Riak.",
+  "license": "Apache-2.0",
+  "source": "https://github.com/m4ce/puppet-riak",
+  "project_page": "https://github.com/m4ce/puppet-riak",
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">=2.7.20 <4.0.0"
+    }
+  ],
+  "description": "Riak module",
+  "dependencies": [
+    {"name":"puppetlabs/inifile","version_requirement":">= 1.2.0 < 1.3.0"},
+  ]
+}

@@ -1,11 +1,20 @@
 class riak::config {
-  # TODO: best would be to use file_line to manage this file
-  file {"/etc/riak/riak.conf":
-    owner => "riak",
-    group => "riak",
-    mode => "0644",
-    content => template("riak/riak.conf.erb"),
-    require => Package["riak"],
+  Ini_setting {
+    path => "/etc/riak/riak.conf",
     notify => Service["riak"]
+  }
+
+  ini_setting {
+    "riak_listener_http_internal":
+      setting => "listener_http_internal",
+      value => $::riak::listener_http_internal;
+
+    "riak_listener_https_internal":
+      setting => "listener_https_internal",
+      value => $::riak::listener_https_internal;
+
+    "riak_listener_protobuf_internal":
+      setting => "listener_protobuf_internal",
+      value => $::riak::listener_protobuf_internal
   }
 }
